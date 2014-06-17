@@ -17,8 +17,8 @@ def setup
 
     @root_path = File.expand_path File.dirname(__FILE__)
 
-    @ball_img       = load_image(@root_path + "/images/ball.png") #{}"/Users/manuelpauls/projects/samples/contributed/ball.png"
-
+    @ball_img       = load_image(@root_path + "/images/ball.png") 
+    
     frame_rate 60
     smooth
     @frame          = 1
