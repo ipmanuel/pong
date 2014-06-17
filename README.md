@@ -10,7 +10,9 @@ Requirements
 ------------
 
 * [Ruby Processing](https://github.com/jashkenas/ruby-processing/wiki/getting-started)
-* [Processing library minim](http://code.compartmental.net/tools/minim/) (preinstalled)
+* [Processing library minim](http://code.compartmental.net/tools/minim/) (normally preinstalled)
+* Install font "Nokia Cellphone FC" (Path: "font/nokiafc22.ttf")
+
 
 
 Start
