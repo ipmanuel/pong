@@ -17,31 +17,40 @@ Start
 -----
 	rp5 run pong.rb
     
-Structure
+About
 ---------
 
-Das Spiel Pong wurde im 8 Bit Stil erstellt und die dazugehörige Musik wurde ebenfalls verwendet.
+The Game Pong has a 8 - Bit Look und the known sounds.
 
-Beim Aufruf der Datei "pong.rb" wird ein Vollbild Fenster geöffnet und man hat drei Auswahlmöglichkeiten: 
-1. Ob man gegen einen Computer oder einer weiteren Person spielen möchte
-2. Man kann den Schwierigkeitsgrad für das Spiel gegen den Computer einstellen
-3. Start Knopf durch die Taste "Enter" betätigen.
+The game runs after opening "pong.rb" in fullscreen mode and there will be three select options:
+* 1. Second Player: computer or human
+* 2. Difficulty: easy, medium, hard
+* 3. Start game
 
-Durch das Betätigen der Start Taste wird das Spielfeld angezeigt und das Spielen beginnt sofort. Die Controller werden über die Pfeiltasten nach unten und oben sowie "w" und "s" nach unten bzw. nach oben bewegt.
+By Pressing the start button the pitch will be shown and the game starts. The actual score will be shown for a few seconds after one player miss ball. The game ends after two minutes playing and save
 
-Der aktuelle Punktestand wird bei jedem Verlust des Balls für wenige Sekunden angezeigt. Daraufhin geht das Spiel normal weiter.
+Keys
+----
 
-Mit der Taste "p" kann das Spiel pausiert werden und mit der selben Taste kann man das Spiel auch fortführen. Um zum Menü zurückzukehren muss man die Taste "m" betätigen. Außerdem wird das Spiel mit ESC beendet.
+| Key        	| Action        					| 
+| ------------- |:--------------------------------:	| 
+| "p"     		| pause and start game 				| 
+| "m"      		| return to menu and end game      	|   
+| ESC 			| close game     					| 
+| "w" 			| player1: move paddle up 			| 
+| "s" 			| player1: move paddle down   		| 
+| "up" 			| player2: move paddle up    		| 
+| "down" 		| player2: move paddle down    		| 
 
-Funktionsweise
+
+How it works
 --------------
 
 ### Ball
-Der Ball bewegt sich immer mit einer Schnelligkeit von 20 Pixel pro Frame in einer Richtigung bis der die X-Koordinate eines Controllers erreicht. Im Fall, dass Der Ball auf einen Controller trifft wirde die Richtung geändert und er bewegt sich mit der selben Geschwindigkeit in entgegensetzer Richtung. Andernfalls bewegt er sich aus der Bildfläche und stopt daraufhin seine Bewegung. Bei Kollision mit einem Controller oder der Bande wird der Ball abegelenkt. An der Bande wird er wie üblich mit dem gleichen Winkel abgelenkt wie er darauftrifft. Im Bezug auf den den Berühpunkt wird das Spielobjekt am Controller abgelenkt. Je größer der Abstand zum Mittelpunkt ist, desto größer ist die Ablenkung nach Oben bzw. nach unten je nachdem welche Hälfte getroffen wird. Daraufhin führt der Ball seine Bewegung mit dem errechneten Winkel fort. Dieser Prozess läuft solange Controller den Ball nicht trifft.
-
+The Ball moves at a speed of 20 pixel per frame in direction and turns direction after reaching x-coordinate of an controller if it hits. If the player miss the ball it will move out of the screen and stop after that. In case of hitting the borders (top and down) the ball will be deflected according to the law of reflefction that implied the angle of incidence is equal to the angle of reflection. The deflecting ankle grows in distance to middle point of a paddle. This process ends until the ball miss a paddle.
 
 ### Computer
-Die Y-Koordinate des Balls ist ein Ankerpunkt des Computer - Controllers. Dadurch wäre der Computer jedoch unschlagbar, daher musste der COmputer die Eigenschaft erhalten Fehler machen zu können. Dies konnte durch Zufallszahlen umgesetzt werden, die der Y-Koordinate des Balls addiert oder subtrahiert wurden. Je größer der Schwierigkeitsgrad, desto geringer wird das Ausmaß des Fehlers. Außerdem wird beim höchsten Schwierigkeitsgrad der Computer COntroller auto zentriert. 
+The computer is not unbeatable because of adding or subracting random digits to y-coordinate of ball, which is the achor point. By growing age of difficulty the random digits are going to be smaller. Furthermore the computer paddle is auto centred at the hardest difficulty.
 
 ### Highscore
-Der Highscore bezieht sich auf die Differenz zwischen den Losts zwischen Computer und Spieler. Außerdem besteht ein Highscore für jeden Schwierigkeitsgrad.
+Hiscore is calculated by the difference of losts betweend human and computer. It calculates an highscore for each age of difficulty.
