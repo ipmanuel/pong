@@ -1,9 +1,11 @@
 8 - Bit Pong
 =============
+Pong is one of the first computer games that has ever been created.
+This simple game consists mainly of two paddles and a ball.
+Pushing the paddles allows to block the ball from falling into the whole and to get a higher score.
+The player has to receive a higher number of points than his opponent after a timeframe of two minutes.
 
-Pong is one of the first computer games that ever created. This simple game consists of two paddles, a ball and the goal that you have more score than the opponent after two minutes playing.
-A player score once the opponent missed a ball. 
-The game can be played with two human players, or one player against a computer controlled paddle. 
+It is possible to play “Pong” with two human players or one player and a computer controlled pair of paddles.
 
 
 Requirements
@@ -21,15 +23,18 @@ Start
     
 About
 ---------
+The Game Pong has an 8 - Bit Look and the well known sounds.
+It runs after opening "pong.rb" in the full-screen-mode. There will be three select options to press:
 
-The Game Pong has a 8 - Bit Look und the known sounds.
 
-The game runs after opening "pong.rb" in fullscreen mode and there will be three select options:
 * 1. Second Player: computer or human
 * 2. Difficulty: easy, medium, hard
 * 3. Start game
 
-By Pressing the start button the pitch will be shown and the game starts. The actual score will be shown for a few seconds after one player miss ball. The game ends after two minutes playing and save
+After pressing the start button the pitch will appear and the game starts.
+The actual score will be shown to the player for a few seconds after the other player missed the ball.
+The game finishes after two minutes playing and saves a highscore.
+
 
 Keys
 ----
@@ -49,10 +54,18 @@ How it works
 --------------
 
 ### Ball
-The Ball moves at a speed of 20 pixel per frame in direction and turns direction after reaching x-coordinate of an controller if it hits. If the player miss the ball it will move out of the screen and stop after that. In case of hitting the borders (top and down) the ball will be deflected according to the law of reflefction that implied the angle of incidence is equal to the angle of reflection. The deflecting ankle grows in distance to middle point of a paddle. This process ends until the ball miss a paddle.
+The Ball moves at a speed of 20 pixels per frame in direction and turns direction after reaching x-coordinate of a controller if it hits. 
+If the player misses the ball it will move out of the screen and stop after that. 
+In case of hitting the borders (top and down) the ball will be deflected according to the law of reflection. This implies the angle of incidence and is equal to the angle of reflection.
+ 
+The deflecting angle grows in distance to the middle point of a paddle. This process finishes until the player misses the ball.
+
 
 ### Computer
-The computer is not unbeatable because of adding or subracting random digits to y-coordinate of ball, which is the achor point. By growing age of difficulty the random digits are going to be smaller. Furthermore the computer paddle is auto centred at the hardest difficulty.
+The computer is not unbeatable because of adding or subtracting random digits to y-coordinate of the ball, which is the anchor point. 
+By a growing stage of difficulty the random digits are going to decrease.
+Furthermore the computer paddles are centred automatically at the hardest difficulty.
 
 ### Highscore
-Hiscore is calculated by the difference of losts betweend human and computer. It calculates an highscore for each age of difficulty.
+Highscore is calculated by the difference of losses between the human and the computer. 
+It calculates a highscore for each stage of difficulty.
